@@ -1,3 +1,5 @@
+# apresentação 
+
 print("""
       
 ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
@@ -8,11 +10,14 @@ print("""
 ╚═════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═════╝░
       """)
 
+# Menu
 print('1. Cadastrar restaurante')
 print('2. Listar restaurante')
 print('3. Ativar Restaurante')
 print('4. Sair\n')
 
+
+# inicio da aplicação
 opcao_escolhida = int(input('Escolha uma opção: '))
 
 if opcao_escolhida == 1:
