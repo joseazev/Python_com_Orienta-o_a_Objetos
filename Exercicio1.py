@@ -13,10 +13,8 @@ def apresentacao():
     ██▄   █▀▀ █▀█ █▀▄   █▄█ █▄█   █ █░▀░█ █▀▀ █▀█ █▀▄ ░▄
     """)
 
-
 def analisa_numero(numero):
     return numero%2
-        
 
 def par_ou_impar(numero):
     if analisa_numero(numero):
