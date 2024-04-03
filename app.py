@@ -1,10 +1,13 @@
 import os
 
-# apresentação 
+def finalizar_app():
+    os.system('cls')
+    print('Finalizando App\n')
 
-def apresentacao():
+def exibir_nome_app():
+
     print("""
-          
+
     ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
     ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
     ╚█████╗░███████║██████╦╝██║░░██║██████╔╝  █████╗░░░╚███╔╝░██████╔╝██████╔╝█████╗░░╚█████╗░╚█████╗░
@@ -13,40 +16,36 @@ def apresentacao():
     ╚═════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═════╝░
     """)
 
-def exibir_menu():
-
-    print('1. Cadastrar restaurante')
-    print('2. Listar restaurante')
-    print('3. Ativar Restaurante')
-    print('4. Sair\n')
-
-def finalizar_app():
-    os.system('cls')
-    print('Encerrando o  Processo')
-
+def exibir_opcoes():
+    print(f'1. Cadasrtrar Restaurante')
+    print(f'2. Listar Restaurante')
+    print(f'3. Ativar Restaurante')
+    print(f'4. Sair\n')
 
 def escolher_opcoes():
+    opcao_escolhida = int(input(f'Escolha uma opção '))
+    print(f'Você escolheu a opção {opcao_escolhida}!')
 
-    opcao_escolhida = int(input('Escolha uma opção: '))
+    match opcao_escolhida:
+        case 1:
+            print('Cadastrar Restaurantes')
 
+        case 2:
+            print('Listar Restaurantes')
 
-    if opcao_escolhida == 1:
-        print('Cadastrar restaurante')
+        case 3:
+            print('Ativar Restaurantes')
 
-    if opcao_escolhida == 2:
-        print('Listar restaurante')
-
-    if opcao_escolhida == 3:
-        print('Ativar restaurante')
-
-    if opcao_escolhida == 4:
-        finalizar_app()
+        case 4:
+            finalizar_app()
+        
+        case _:
+            print('opção inválida')
 
 def main():
+    exibir_nome_app()
 
-    apresentacao()
-
-    exibir_menu()
+    exibir_opcoes()
 
     escolher_opcoes()
 
