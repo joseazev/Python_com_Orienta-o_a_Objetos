@@ -47,13 +47,13 @@ def definindo_quadrante(z):
         return f'O ponto está no quarto quadrante'
     
 
+def main():
+    apresentacao()
+    x = int(input('Qual é o ponto X? '))
+    y = int(input('Qual é o ponto y? '))
 
+    result = definindo_quadrante(descobrindo_quadrante(x,y))
+    print(result)
 
-
-apresentacao()
-x = int(input('Qual é o ponto X? '))
-y = int(input('Qual é o ponto y? '))
-
-result = definindo_quadrante(descobrindo_quadrante(x,y))
-print(result)
-
+if __name__ == '__main__':
+    main()
