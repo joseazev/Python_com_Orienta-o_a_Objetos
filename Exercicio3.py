@@ -30,11 +30,11 @@ def apresentacao():
 def verrificar_identidade(usuario,usuario_escrito,senha,senha_escrita):
     if usuario_escrito == usuario:
         if senha == senha_escrita:
-            print(f'Bem vindo {usuario}')
-        else:
-            print(f'senha incorreta')
-    else:
-        print('Usuário não encontrado')
+            return f'Bem vindo {usuario}'
+        
+        return f'senha incorreta'
+    
+    return f'Usuário não encontrado'
 
 
 def main():
