@@ -45,7 +45,7 @@ def main():
     usuario_escrito = input('Informe o usuário: ')
     senha_escrita   = input('Informe a senha:   ')
 
-    verrificar_identidade(usuario,usuario_escrito,senha,senha_escrita)
+    print(verrificar_identidade(usuario,usuario_escrito,senha,senha_escrita))
 
 if __name__ == '__main__':
     main()

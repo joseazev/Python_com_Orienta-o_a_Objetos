@@ -11,7 +11,10 @@ from os import system
 system('cls')
 
 def apresentacao():
-    print('Batalha Naval')
+    print('''
+█▄▄ ▄▀█ ▀█▀ ▄▀█ █░░ █░█ ▄▀█   █▄░█ ▄▀█ █░█ ▄▀█ █░░
+█▄█ █▀█ ░█░ █▀█ █▄▄ █▀█ █▀█   █░▀█ █▀█ ▀▄▀ █▀█ █▄▄
+''')
 
 def descobrindo_quadrante(x,y):
     if x == 0 and y == 0:
