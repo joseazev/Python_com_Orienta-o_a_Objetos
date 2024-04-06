@@ -31,20 +31,17 @@ def descobrindo_quadrante(x,y):
 
 
 def definindo_quadrante(z):
-    if z == 0:
-        return f'O ponto está localizado no eixo ou origem'
-    
-    if z == 1:
-        return f'O ponto está no primeiro quadrante'
-    
-    if z == -1:
-        return f'O ponto está no segundo quadrante'
-    
-    if z == 2:
-        return f'O ponto está no terceiro quadrante'
-    
-    if z == -2:
-        return f'O ponto está no quarto quadrante'
+    match z:
+        case 0:
+            return f'O ponto está localizado no eixo ou origem'
+        case 1:
+            return f'O ponto está no primeiro quadrante'
+        case -1:
+            return f'O ponto está no segundo quadrante'
+        case 2:
+            return f'O ponto está no terceiro quadrante'
+        case -2:
+            return f'O ponto está no quarto quadrante'
     
 
 def main():
