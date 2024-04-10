@@ -2,15 +2,6 @@ import os
 
 restaurantes = ['Caipira','Três Marias','Xian Rio']
 
-def limpar_tela(subtitulo):
-    os.system('cls')
-    print(subtitulo)
-
-
-def finalizar_app():
-    limpar_tela()
-    print('Finalizando App\n')
-
 def exibir_nome_app():
 
     print("""
@@ -29,6 +20,10 @@ def exibir_opcoes():
     print(f'3. Ativar Restaurante')
     print(f'4. Sair\n')
 
+def limpar_tela(mensagem):
+    os.system('cls')
+    print(mensagem)
+
 def opcao_invalida():
     print('opção inválida\n')
     voltar_ao_menu_principal()
@@ -38,15 +33,15 @@ def voltar_ao_menu_principal():
     main()
 
 def cadastrar_novo_restaurante():
-    limpar_tela('Cadastrar Restaurantes')
+    limpar_tela('Cadastrar Novo Restaurante')
     novo_retaurante = input('informe nome do restaurante que deseja cadastrar:\n')
     restaurantes.append(novo_retaurante)
-    limpar_tela()
     print(f'\nRestaurante {restaurantes[-1]} foi cadastrado com sucesso')
     voltar_ao_menu_principal()
 
 def listar_retaurantes():
     limpar_tela('Listando Restaurantes\n')
+    print()
 
     for restaurante in restaurantes:
         print(f'.{ restaurante}')
@@ -60,7 +55,6 @@ def escolher_opcoes():
     try:
         match opcao_escolhida:
             case 1:
-                
                 cadastrar_novo_restaurante()
 
             case 2:
@@ -78,8 +72,13 @@ def escolher_opcoes():
     except:
         opcao_invalida()
 
+
+def finalizar_app():
+    limpar_tela('Finalizando App\n')
+    print()
+
 def main():
-    limpar_tela()
+    limpar_tela('')
 
     exibir_nome_app()   
 
