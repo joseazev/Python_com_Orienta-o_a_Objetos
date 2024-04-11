@@ -24,7 +24,10 @@ def exibir_opcoes():
 
 def limpar_tela(mensagem):
     os.system('cls')
+    linha = '*' * (len(mensagem) +4)
+    print(linha)
     print(mensagem)
+    print(linha)
     print()
 
 def opcao_invalida():
@@ -49,11 +52,12 @@ def listar_retaurantes():
     limpar_tela('Listando Restaurantes\n')
     print()
 
+    print(f'{'Restaurante'.ljust(21)}|{'Categoria'.ljust(20)}|Status')
     for restaurante in restaurantes:
         nome_restaurante = restaurante['nome']
         categoria_restaurante = restaurante['categoria']
         status = 'Ativado' if restaurante['ativo'] else 'Desativado'
-        print(f'.{nome_restaurante} | {categoria_restaurante} | {status}')
+        print(f'.{nome_restaurante.ljust(20)}|{categoria_restaurante.ljust(20)}|{status}')
 
     voltar_ao_menu_principal()
 
@@ -75,7 +79,6 @@ def mudar_status_restaurante():
 
     voltar_ao_menu_principal()
     
-
 def escolher_opcoes():
     opcao_escolhida = int(input(f'Escolha uma opção '))
     print(f'Você escolheu a opção {opcao_escolhida}!')
@@ -100,13 +103,12 @@ def escolher_opcoes():
     except:
         opcao_invalida()
 
-
 def finalizar_app():
     limpar_tela('Finalizando App\n')
     print()
 
 def main():
-    limpar_tela('')
+    os.system('cls')
 
     exibir_nome_app()   
 
